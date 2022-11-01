@@ -1,7 +1,7 @@
 <template >
     <div class="pokemon-container">
-        <img :src="imgSrc" alt="pokemon"/>
-        <img :src="imgSrc" class="fade-in hidden-pokemon" alt="pokemon"/>
+        <img :src="imgSrc"  alt="pokemon"/>
+        <img :src="imgSrc" v-if="showPokemon" class="fade-in hidden-pokemon" alt="pokemon"/>
     </div>
 </template>
 <script>
@@ -11,6 +11,10 @@ export default {
         pokemonId:{
             type:Number,
             required:true,
+        },showPokemon:{
+            type:Boolean,
+            required:true,
+            default:false,
         }
     },computed:{
         imgSrc(){
