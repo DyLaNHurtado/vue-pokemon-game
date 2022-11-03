@@ -1,25 +1,26 @@
 <template>
   <h1 v-if="!pokemon">Wait please ...</h1>
-  <div v-else>
+  <div class="game-component" v-else>
     <h1>Who is that pokemon?</h1>
     <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemons="pokemonArr" />
-    <template v-if="showAnswer">
+    <template v-if ="showAnswer">
       <h2>{{message}}</h2>
       <button @click="newGame">Nuevo Juego</button>
     </template>
-    
+    <HomeButton/>
   </div>
     
 </template>
 <script>
 import PokemonOptions from '@/components/PokemonOptions.vue';
 import PokemonPicture from '@/components/PokemonPicture.vue';
+import HomeButton from '@/components/HomeButton.vue';
 import getPokemonOptions from '@/helpers/getPokemonOptions.js';
 export default {
     name: 'PokemonPage',
   components: {
-    PokemonPicture,PokemonOptions
+    PokemonPicture,PokemonOptions,HomeButton
   },
   data(){
     return{
@@ -57,6 +58,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-  
-</style>

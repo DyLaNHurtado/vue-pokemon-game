@@ -1,10 +1,13 @@
-html, body {
-    min-width: 100%;
-    min-height: 100%;
+
+html ,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
     background-color: #F2F5EA;
     color: #2C363F;
-    margin: 0px;
-}
+    
+  }
+
 @font-face {
     font-family: 'PixelColeco';
     src: url('../assets/fonts/PixelColeco-4vJW.ttf')  format('truetype');
@@ -24,4 +27,14 @@ h1{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    margin: 0;
+    padding: 30px 0;
+    background-color: #2C363F;
+}
+
+button .icon{
+    fill: #BBC7A4;
+}
+button:hover .icon{
+    fill: #E75A7C;
 }

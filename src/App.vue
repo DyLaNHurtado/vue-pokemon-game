@@ -1,5 +1,10 @@
 <template>
 <PokemonPage/>
+<a href="https://github.com/DyLaNHurtado" target="_blank">
+  <footer>
+    <span>Made with 💗 by DyLaNHurtado </span>
+  </footer>
+</a>
 </template>
 
 <script>
@@ -15,11 +20,31 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100%;
+  font-family: 'TimeBurner';
+}
+a{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'TimeBurner';
+  color: #2c3e50;
+}
+footer{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'TimeBurnerBold';
+  position: fixed;
+  bottom: 0;
+  color: #2c3e50;
+  min-width: 100%;
+  transition: all .5s;
+  padding: 2px 0;
+}
+footer:hover{
+  background-color: #2c3e50;
+  color: #BBC7A4;
+  padding: 10px 0;
 }
 </style>
