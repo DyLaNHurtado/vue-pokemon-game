@@ -22,7 +22,7 @@ export default {
 #app {
   text-align: center;
   color: #2c3e50;
-  min-height: 100%;
+  height: 100%;
   font-family: 'TimeBurner';
 }
 a{

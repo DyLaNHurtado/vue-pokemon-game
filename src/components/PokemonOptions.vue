@@ -1,7 +1,9 @@
 <template >
     <div class="options-container">
         <ul>
-            <li v-for="pokemon in pokemons" :key="pokemon.id" @click="$emit('selectionPokemon',pokemon.id)" >
+            <li v-for="pokemon in pokemons" :key="pokemon.id" @click="checkAnswer(pokemon.id)" :class="isAnswerReady && pokemon.id==pokemonId ? 'correct-option':''">
+                <span v-if="isAnswerReady && pokemon.id==pokemonId">✅</span>
+                <span v-if="isAnswerReady && pokemon.id!=pokemonId">❌</span>
                 {{pokemon.name}}
             </li>
         </ul>
@@ -10,10 +12,36 @@
 <script>
 export default {
     name:'PokemonOptions',
+    data(){
+        return{
+            isAnswerReady:false,
+            isCorrect:false,
+        }
+    },
     props:{
         pokemons:{
             type:Array,
             required:true,
+        },
+        pokemonId:{
+            type:Number,
+            required:true,
+        }
+    },methods:{
+        checkAnswer(pokemonIdSelect){
+            this.isAnswerReady=true
+            console.log(this.pokemonId);
+            if(this.pokemonId==pokemonIdSelect){
+                this.isCorrect=true;
+            }else{
+                this.isCorrect=false;
+            }
+            this.$emit('selectionPokemon',this.isCorrect);
+        }
+    },watch:{
+        pokemonId(){
+            this.isAnswerReady=false;
+            this.isCorrect=false;
         }
     }
 }
@@ -30,7 +58,7 @@ li {
     border-radius: 500px;
     padding: 0.5em 6em;
     margin-bottom: 0.5em;
-    z-index: 2;
+    border: 2px solid #BBC7A4;
     font-family: 'PixelColeco';
     user-select: none;
     -moz-user-select: none;
@@ -41,14 +69,20 @@ li {
 }
 
 li:hover {
-    z-index: 3;
-    background-color: #BBC7A4;
-    color:#F2F5EA;
-    -webkit-box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
-    -moz-box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
-    box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
+    background-color: #2C363F;
+    color:#E75A7C;
+    border:2px solid #2C363F;
+    box-shadow: 0px 0px 6px #E75A7C;
 }
-
+.correct-option{
+    background-color: #BBC7A4;
+}
+.correct-option:hover{
+    background-color: #BBC7A4;
+    color:#2C363F;
+    border-color: #BBC7A4;
+    box-shadow: none;
+}
 .options-container {
     display: flex;
     justify-content: center;

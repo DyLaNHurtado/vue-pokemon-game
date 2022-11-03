@@ -1,11 +1,12 @@
 <template>
   <h1 v-if="!pokemon">Wait please ...</h1>
-  <div v-else>
+  
+  <div v-else class="game-container" >
     <h1>Who is that pokemon?</h1>
     <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
-    <PokemonOptions @selection-pokemon="checkAnswer" :pokemons="pokemonArr" />
+    <PokemonOptions @selection-pokemon="checkAnswer" :pokemonId="pokemon.id" :pokemons="pokemonArr" @send-answer="" />
+    Score: {{score}}
     <template v-if ="showAnswer">
-      <h2>{{message}}</h2>
       <button @click="newGame">Nuevo Juego</button>
     </template>
     <PanelButtons class="panel"/>
@@ -31,8 +32,7 @@ export default {
       pokemonArr:[],
       pokemon:null,
       showPokemon:false,
-      showAnswer:false,
-      message:'',
+      score:0,
     }
   },
   methods:{
@@ -41,14 +41,14 @@ export default {
       const rndInt = Math.floor(Math.random()*4);
       this.pokemon = this.pokemonArr[rndInt];
     },
-    checkAnswer(pokemonId){
+    checkAnswer(isCorrect){
       this.showPokemon=true;
-      this.showAnswer = true;
-      if(pokemonId ===this.pokemon.id){
-        this.message = `Correct, it was ${this.pokemon.name}`
+      if(isCorrect){
+        this.score += 10;
       }else{
-        this.message = `Oops, it was ${this.pokemon.name}`
+        this.score-=3;
       }
+      setTimeout(()=> this.newGame(),500);
     },newGame(){
       this.pokemonArr=[];
       this.showPokemon=false;
