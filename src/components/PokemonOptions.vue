@@ -17,41 +17,37 @@ export default {
         }
     }
 }
-</script>ul {
-    list-style-type: none;
-}
-li {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    margin-bottom: 10px;
-    width: 250px;
-}
-
-li:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.options-container {
-    display: flex;
-    justify-content: center;
-}
+</script>
 <style scoped>
     ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 li {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+
     cursor: pointer;
-    margin-bottom: 10px;
-    width: 250px;
+    background-color: #D6DBD2;
+    border-radius: 500px;
+    padding: 0.5em 6em;
+    margin-bottom: 0.5em;
+    z-index: 2;
+    font-family: 'PixelColeco';
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
 }
 
 li:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 3;
+    background-color: #BBC7A4;
+    color:#F2F5EA;
+    -webkit-box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
+    -moz-box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
+    box-shadow: 0 0 14px rgba(34, 44, 55, 0.3);
 }
 
 .options-container {

@@ -1,4 +1,27 @@
 html, body {
-    background-color: #f1f1f1;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #F2F5EA;
+    color: #2C363F;
     margin: 0px;
+}
+@font-face {
+    font-family: 'PixelColeco';
+    src: url('../assets/fonts/PixelColeco-4vJW.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'TimeBurnerBold';
+    src: url('../assets/fonts/TimeburnerBold-peGR.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'TimeBurner';
+    src: url('../assets/fonts/Timeburner-xJB8.ttf')  format('truetype');
+}
+h1{
+    color: #E75A7C;
+    font-weight: 100;
+    font-family: 'TimeBurnerBold';
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }

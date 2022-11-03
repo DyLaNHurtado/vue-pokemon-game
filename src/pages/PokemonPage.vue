@@ -1,7 +1,7 @@
 <template>
-  <h1 v-if="!pokemon">Espera por favor ...</h1>
+  <h1 v-if="!pokemon">Wait please ...</h1>
   <div v-else>
-    <h1>¿Cual es este Pokemon?</h1>
+    <h1>Who is that pokemon?</h1>
     <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemons="pokemonArr" />
     <template v-if="showAnswer">
@@ -40,9 +40,9 @@ export default {
       this.showPokemon=true;
       this.showAnswer = true;
       if(pokemonId ===this.pokemon.id){
-        this.message = `Correcto, ${this.pokemon.name}`
+        this.message = `Correct, it was ${this.pokemon.name}`
       }else{
-        this.message = `Oops era, ${this.pokemon.name}`
+        this.message = `Oops, it was ${this.pokemon.name}`
       }
     },newGame(){
       this.pokemonArr=[];
@@ -57,3 +57,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+  
+</style>

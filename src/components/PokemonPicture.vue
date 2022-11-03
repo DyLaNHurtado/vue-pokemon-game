@@ -32,7 +32,6 @@ export default {
 }
 img{
     height: 200px;
-    position: absolute;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
