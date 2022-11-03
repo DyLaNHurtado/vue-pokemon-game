@@ -38,3 +38,8 @@ button .icon{
 button:hover .icon{
     fill: #E75A7C;
 }
+.panel{
+    position: fixed;
+    bottom: 20%;
+    width: 100%;
+}

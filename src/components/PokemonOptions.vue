@@ -25,7 +25,6 @@ export default {
     margin: 0;
 }
 li {
-
     cursor: pointer;
     background-color: #D6DBD2;
     border-radius: 500px;
