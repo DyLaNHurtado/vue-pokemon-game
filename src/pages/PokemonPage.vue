@@ -6,6 +6,7 @@
     <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemonId="pokemon.id" :pokemons="pokemonArr" @send-answer="" />
     Score: {{score}}
+    <Timer/>
     <template v-if ="showAnswer">
       <button @click="newGame">Nuevo Juego</button>
     </template>
@@ -19,13 +20,15 @@ import PokemonPicture from '@/components/PokemonPicture.vue';
 import HomeButton from '@/components/HomeButton.vue';
 import getPokemonOptions from '@/helpers/getPokemonOptions.js';
 import PanelButtons from '@/components/PanelButtons.vue';
+import Timer from '@/components/Timer.vue';
 export default {
     name: 'PokemonPage',
   components: {
     PokemonPicture,
     PokemonOptions,
     HomeButton,
-    PanelButtons
+    PanelButtons,
+    Timer
 },
   data(){
     return{
@@ -46,7 +49,7 @@ export default {
       if(isCorrect){
         this.score += 10;
       }else{
-        this.score-=3;
+        this.score-=5;
       }
       setTimeout(()=> this.newGame(),500);
     },newGame(){
