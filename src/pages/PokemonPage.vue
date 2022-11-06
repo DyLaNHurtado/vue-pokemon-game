@@ -1,14 +1,14 @@
 <template>
-  <h1 v-show="!pokemon.id">Wait please ...</h1>
-  
+  <h1 id="wait" v-show="!pokemon.id">Wait please ...</h1>
+<Transition>
   <div v-show="pokemon.id" class="game-container" >
     <h1>Who is that pokemon?</h1>
     <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon"/>
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
-    <Timer :time="5"/>
+    <Timer :time="11"/>
     <PanelButtons class="panel"/>
   </div>
-    
+</Transition>
 </template>
 <script>
 import PokemonOptions from '@/components/PokemonOptions.vue';

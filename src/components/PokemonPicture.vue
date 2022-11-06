@@ -1,6 +1,7 @@
 <template >
     <div class="pokemon-container">
-        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon':''" class="fade-in" />
+        <img v-show="!pokemon.id" class="loader" src="../assets/loader.gif">
+        <img  :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon':''" />
     </div>
 </template>
 <script>
@@ -41,8 +42,17 @@ img{
     -ms-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+    -webkit-user-drag: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+
 }
     .hidden-pokemon{
         filter: brightness(0);
+    }
+    .loader{
+        filter: drop-shadow(0 0 0.75rem #2C363F)
+        
     }
 </style>

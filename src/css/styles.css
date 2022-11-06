@@ -49,3 +49,22 @@ button:hover .icon{
     justify-content: space-between;
     height: 90%;
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity .2s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+#wait{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.loader{
+    filter: drop-shadow(0 0 0.75rem #2C363F)
+}
