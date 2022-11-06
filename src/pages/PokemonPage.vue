@@ -1,15 +1,11 @@
 <template>
-  <h1 v-if="!pokemon">Wait please ...</h1>
+  <h1 v-show="!pokemon.id">Wait please ...</h1>
   
-  <div v-else class="game-container" >
+  <div v-show="pokemon.id" class="game-container" >
     <h1>Who is that pokemon?</h1>
-    <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon"/>
-    <PokemonOptions @selection-pokemon="checkAnswer" :pokemonId="pokemon.id" :pokemons="pokemonArr" @send-answer="" />
-    Score: {{score}}
-    <Timer/>
-    <template v-if ="showAnswer">
-      <button @click="newGame">Nuevo Juego</button>
-    </template>
+    <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon"/>
+    <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
+    <Timer :time="5"/>
     <PanelButtons class="panel"/>
   </div>
     
@@ -33,7 +29,7 @@ export default {
   data(){
     return{
       pokemonArr:[],
-      pokemon:null,
+      pokemon:{},
       showPokemon:false,
       score:0,
     }
@@ -47,16 +43,14 @@ export default {
     checkAnswer(isCorrect){
       this.showPokemon=true;
       if(isCorrect){
-        this.score += 10;
-      }else{
-        this.score-=5;
+        this.score += 1;
       }
       setTimeout(()=> this.newGame(),500);
     },newGame(){
       this.pokemonArr=[];
       this.showPokemon=false;
       this.showAnswer=false;
-      this.pokemon=null;
+      this.pokemon={};
       this.mixPokemonsArr();
     }
   },

@@ -1,11 +1,11 @@
 <template >
     <div class="options-container">
         <ul>
-            <li v-for="pokemon in pokemons" :key="pokemon.id" @click="checkAnswer(pokemon.id)" :class="isAnswerReady && pokemon.id==pokemonId ? 'correct-option':''">
-                <span v-if="isAnswerReady && pokemon.id==pokemonId">✅</span>
-                <span v-if="isAnswerReady && pokemon.id!=pokemonId">❌</span>
-                {{pokemon.name}}
-            </li>
+            <li v-for="pokemon in pokemons" :key="pokemon.id" @click="checkAnswer(pokemon.id)" :class="isAnswerReady && pokemon.id==pokemonCorrect.id ? 'correct-option':''">
+                <span v-show="isAnswerReady && pokemon.id==pokemonCorrect.id" style="align-self: flex-start;">✅</span>
+                <span v-show="isAnswerReady && pokemon.id!=pokemonCorrect.id" style="align-self: flex-start;">❌</span>
+                <span style="align-self: center; width: 100%;">{{pokemon.name}}</span>
+            </li>    
         </ul>
     </div>
 </template>
@@ -23,15 +23,14 @@ export default {
             type:Array,
             required:true,
         },
-        pokemonId:{
-            type:Number,
+        pokemonCorrect:{
+            type:Object,
             required:true,
         }
     },methods:{
         checkAnswer(pokemonIdSelect){
             this.isAnswerReady=true
-            console.log(this.pokemonId);
-            if(this.pokemonId==pokemonIdSelect){
+            if(this.pokemonCorrect.id==pokemonIdSelect){
                 this.isCorrect=true;
             }else{
                 this.isCorrect=false;
@@ -39,7 +38,7 @@ export default {
             this.$emit('selectionPokemon',this.isCorrect);
         }
     },watch:{
-        pokemonId(){
+        pokemonCorrect(){
             this.isAnswerReady=false;
             this.isCorrect=false;
         }
@@ -66,6 +65,7 @@ li {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
     transition: all .2s;
+    display: flex;
 }
 
 li:hover {
@@ -86,5 +86,6 @@ li:hover {
 .options-container {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 </style>

@@ -1,14 +1,14 @@
 <template >
     <div class="pokemon-container">
-        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon':''" class="fade-in"  alt="pokemon"/>
+        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon':''" class="fade-in" />
     </div>
 </template>
 <script>
 export default {
     name:'PokemonPicture',
     props:{
-        pokemonId:{
-            type:Number,
+        pokemon:{
+            type: Object ,
             required:true,
         },showPokemon:{
             type:Boolean,
@@ -17,7 +17,11 @@ export default {
         }
     },computed:{
         imgSrc(){
-            return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemonId}.png`
+            if(this.pokemon.id){
+             return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemon.id}.png`
+            }else{
+                return '';
+            }
         }
     }
 
