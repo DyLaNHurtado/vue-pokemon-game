@@ -1,5 +1,5 @@
 <template>
-<PokemonPage/>
+<router-view></router-view>
 <a href="https://github.com/DyLaNHurtado" target="_blank">
   <footer>
     <span>Made with 💗 by DyLaNHurtado </span>

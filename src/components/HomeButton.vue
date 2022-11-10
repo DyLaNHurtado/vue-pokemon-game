@@ -1,7 +1,9 @@
 <template>
+<router-link to="/">
     <button>
             <HomeIcon class="icon"/><span>Home</span>
     </button>
+</router-link>
 </template>
 
 <script>

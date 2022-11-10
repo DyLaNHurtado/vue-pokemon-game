@@ -51,8 +51,5 @@ img{
     .hidden-pokemon{
         filter: brightness(0);
     }
-    .loader{
-        filter: drop-shadow(0 0 0.75rem #2C363F)
-        
-    }
+
 </style>

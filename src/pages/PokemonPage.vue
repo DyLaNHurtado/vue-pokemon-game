@@ -31,7 +31,8 @@ export default {
       pokemonArr:[],
       pokemon:{},
       showPokemon:false,
-      score:0,
+      correctCount:0,
+      totalCount:0,
     }
   },
   methods:{
@@ -43,8 +44,9 @@ export default {
     checkAnswer(isCorrect){
       this.showPokemon=true;
       if(isCorrect){
-        this.score += 1;
+        this.correctCount += 1;
       }
+      this.totalCount+=1;
       setTimeout(()=> this.newGame(),500);
     },newGame(){
       this.pokemonArr=[];
