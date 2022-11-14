@@ -4,7 +4,7 @@
                 <PlayIcon class="icon"/><span>Play</span>
         </button>
     </router-link>
-    </template>
+</template>
     
     <script>
     import PlayIcon from '@/assets/icons/PlayIcon.vue'
@@ -19,9 +19,6 @@
     </script>
     
     <style scoped>
-    a{
-
-    }
     button{
         text-align: center;
         width: 80vw;
