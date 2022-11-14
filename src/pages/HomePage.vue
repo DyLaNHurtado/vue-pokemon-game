@@ -2,7 +2,7 @@
 <div class="home-container">
     <div class="title-container">
         <h2>Pokemon Challenge</h2>
-        <span>Guess the pokemon names</span>
+        <span>Guess the pokemon by name</span>
     </div>
 
     <div class="image-container">
