@@ -37,7 +37,7 @@ export default {
   },
   methods:{
     async mixPokemonsArr(){
-      this.pokemonArr = await getPokemonOptions();
+      this.pokemonArr = await getPokemonOptions(localStorage.getItem('mode'));
       const rndInt = Math.floor(Math.random()*4);
       this.pokemon = this.pokemonArr[rndInt];
     },

@@ -1,6 +1,6 @@
 <template>
     <router-link to="/game">
-        <li>
+        <li @click="selectMode">
             <div class="img-container">
                 <img :src="uri ? uri : 'https://raw.githubusercontent.com/DyLaNHurtado/vue-pokemon-game/master/src/assets/loader.gif'" />
             </div>
@@ -16,6 +16,10 @@
     export default {
         name:'GameMode',
         props:{
+            id:{
+                type:Number,
+                required:true,
+            },
             uri:{
                 type:String,
                 required:true,
@@ -27,6 +31,11 @@
             description:{
                 type:String,
                 default:'',
+            }
+        },methods:{
+            selectMode(){
+                console.log(this.id);
+                localStorage.setItem('mode', this.id);
             }
         }
     }
