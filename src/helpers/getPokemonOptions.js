@@ -10,7 +10,6 @@ const getPokemon = ()=>{
 }
 const getPokemonNames = async([a,b,c,d] =[])=>{
 
-   const response = await pokemonApi.get(`/1`);
     const arrPromises = [
         pokemonApi.get(`/${a}`),
         pokemonApi.get(`/${b}`),

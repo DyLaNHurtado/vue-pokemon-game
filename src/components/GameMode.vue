@@ -5,8 +5,8 @@
                 <img :src="uri ? uri : 'https://raw.githubusercontent.com/DyLaNHurtado/vue-pokemon-game/master/src/assets/loader.gif'" />
             </div>
             <div class="option-container">
-                <span>{{name || 'Loading...'}}</span>
-                <span>{{description}}</span>
+                <span id="name">{{name || 'Loading...'}}</span>
+                <span id="description">{{description}}</span>
             </div>
         </li>
     </router-link>
@@ -41,10 +41,9 @@
         z-index: 2;
         border:2px solid #BBC7A4;
         transition: all .3s;
-        font-family: 'PixelColeco';
     }
     li:hover{
-        background-color: #F2F5EA;
+        background-color: #2C363F;
         z-index: 3;
         box-shadow: 0px 0px 5px #BBC7A4;
         border:2px solid #E75A7C;
@@ -77,5 +76,13 @@
         align-items: center;
         justify-content: center;
     }
-    
+    #name{
+        font-family: 'PixelColeco';
+    }
+    li:hover .option-container #name{
+        color:#E75A7C
+    }
+    li:hover .option-container #description{
+        color:#BBC7A4
+    }
     </style>
