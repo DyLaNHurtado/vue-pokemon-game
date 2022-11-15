@@ -7,7 +7,7 @@
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
     <Timer :time="11"/>
     <PanelButtons class="panel"/>
-    <FinishDialog/>
+    <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
 
   </div>
 </Transition>
@@ -37,6 +37,9 @@ export default {
       showPokemon:false,
       correctCount:0,
       totalCount:0,
+      score:0,
+      timeRate:0,
+      timeRateTimeout:null
     }
   },
   methods:{
@@ -49,14 +52,17 @@ export default {
       this.showPokemon=true;
       if(isCorrect){
         this.correctCount += 1;
+        this.score += 5;
+      }else{
+        this.score -= 3;
       }
       this.totalCount+=1;
       setTimeout(()=> this.newGame(),500);
     },newGame(){
-      this.pokemonArr=[];
-      this.showPokemon=false;
-      this.showAnswer=false;
-      this.pokemon={};
+      this.pokemonArr = [];
+      this.showPokemon = false;
+      this.showAnswer = false;
+      this.pokemon = {};
       this.mixPokemonsArr();
     }
   },

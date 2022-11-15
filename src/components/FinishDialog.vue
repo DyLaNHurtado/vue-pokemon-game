@@ -7,11 +7,10 @@
             <span>{{correctCount}}</span>
             <span>{{totalCount-correctCount}}</span>
             <span>{{totalCount}}</span>
+            <span>{{timeRate}}</span>
         </div>
         <PanelButtons style="width: 100%; height: 20%;"/>
     </div>
-   
-    
 </template>
 <script>
 import PanelButtons from './PanelButtons.vue';
@@ -28,6 +27,10 @@ import PanelButtons from './PanelButtons.vue';
             required: true,
         },
         totalCount: {
+            type: Number,
+            required: true,
+        },
+        timeRate: {
             type: Number,
             required: true,
         }
