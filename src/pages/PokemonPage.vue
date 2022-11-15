@@ -7,6 +7,8 @@
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
     <Timer :time="11"/>
     <PanelButtons class="panel"/>
+    <FinishDialog/>
+
   </div>
 </Transition>
 </template>
@@ -17,6 +19,7 @@ import HomeButton from '@/components/HomeButton.vue';
 import getPokemonOptions from '@/helpers/getPokemonOptions.js';
 import PanelButtons from '@/components/PanelButtons.vue';
 import Timer from '@/components/Timer.vue';
+import FinishDialog from '@/components/FinishDialog.vue';
 export default {
     name: 'PokemonPage',
   components: {
@@ -24,7 +27,8 @@ export default {
     PokemonOptions,
     HomeButton,
     PanelButtons,
-    Timer
+    Timer,
+    FinishDialog
 },
   data(){
     return{

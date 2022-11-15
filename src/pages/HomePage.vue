@@ -4,7 +4,6 @@
         <h2>Pokemon Challenge</h2>
         <span>Guess the pokemon by name</span>
     </div>
-
     <div class="image-container">
         <img src="../assets/home.gif" />
     </div>
