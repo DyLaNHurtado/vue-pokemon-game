@@ -1,5 +1,5 @@
 <template>
-        <div class="dialog">
+        <div class="dialog fade-in">
         <h2>Time out!</h2>
         <div class="stats-container">
             <h3>Stats</h3>
@@ -9,7 +9,7 @@
             <span>{{totalCount}}</span>
             <span>{{timeRate}}</span>
         </div>
-        <PanelButtons style="width: 100%; height: 20%;"/>
+        <PanelButtons :display="'finish'" class="panel" style="height: 20%;"/>
     </div>
 </template>
 <script>
@@ -55,9 +55,9 @@ import PanelButtons from './PanelButtons.vue';
         overflow: hidden;
         padding: 10px 15px;
         box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-        background: white;
+        background: #F2F5EA;
         color: rgba(0, 0, 0, 0.87);
-        border:2px solid white;
+        border:8px solid #BBC7A4;
         z-index: 100;
     }
     h2{

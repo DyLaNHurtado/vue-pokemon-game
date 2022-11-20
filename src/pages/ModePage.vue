@@ -1,17 +1,19 @@
 <template>
-    <h1>Game Modes</h1>
+    <h1><GameModeIcon/>Select A Game Mode</h1>
     <div class="gamemodes-container">
       <GameMode v-for="gamemode in gamemodes" :key="gamemode.id" :id="gamemode.id" :uri="gamemode.uri" :name="gamemode.name" :description="gamemode.description"/>
     </div>
 </template>
   <script>
   
+import GameModeIcon from '@/assets/icons/GameModeIcon.vue';
 import GameMode from '@/components/GameMode.vue';
 
   export default {
     name: 'ModePage',
     components: {
-    GameMode
+    GameMode,
+    GameModeIcon
 },
     data(){
       return{
@@ -72,5 +74,13 @@ import GameMode from '@/components/GameMode.vue';
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+    }
+    h1{
+      display: flex;
+      fill: #E75A7C;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 1vw;
     }
   </style>

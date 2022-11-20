@@ -6,9 +6,10 @@
     <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon"/>
     <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
     <Timer :time="11"/>
-    <PanelButtons class="panel"/>
-    <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
-
+    <PanelButtons :display="'game'" class="panel"/>
+    <Transition>
+      <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
+    </Transition>
   </div>
 </Transition>
 </template>

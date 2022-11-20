@@ -1,4 +1,3 @@
-
 import pokemonApi from '@/api/pokemonApi'
 
 const getPokemon = (mode) => {

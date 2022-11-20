@@ -1,15 +1,28 @@
 <template>
-<div class="panel-container">
+<div v-if="display==='finish'" class="panel-container">
+    <HomeButton/>
+    <GameModeButton/>
+    <HomeButton/>
+</div>
+<div v-else class="panel-container">
     <HomeButton/>
     <HomeButton/>
 </div>
 </template>
 <script>
+import GameModeButton from './GameModeButton.vue';
 import HomeButton from './HomeButton.vue';
 export default {
     name:'PanelButtons',
     components:{
-        HomeButton
+    HomeButton,
+    GameModeButton
+},
+    props:{
+        display:{
+            type:String,
+            required:true
+        }
     }
 }
 </script>
