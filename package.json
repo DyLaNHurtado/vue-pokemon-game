@@ -20,7 +20,8 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "standard": "^17.0.0"
   },
   "browserslist": [
     "> 1%",
@@ -30,5 +31,10 @@
   ],
   "jest": {
     "preset": "@vue/cli-plugin-unit-jest"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
