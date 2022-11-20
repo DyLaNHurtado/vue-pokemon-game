@@ -1,13 +1,17 @@
 <template>
     <div class="dialog fade-in">
         <h2>⏱️ Time out!</h2>
-        <div class="stats-container">
+        <div class="content">
             <h3>Stats:</h3>
-            <Stat :label="'Score:'" :value="score" />
-            <Stat :label="'Correct Count:'" :value="correctCount" />
-            <Stat :label="'Incorrect Count:'" :value="totalCount - correctCount" />
-            <Stat :label="'Total anwsered Count:'" :value="totalCount" />
-            <Stat :label="'Average Response Time:'" :value="timeRate" />
+            <div class="container-mobile">
+                <Stat :label="'Score:'" :value="score" />
+                <Stat :label="'Correct Count:'" :value="correctCount" />
+                <Stat :label="'Incorrect Count:'" :value="totalCount - correctCount" />
+            </div>
+            <div class="container-mobile">
+                <Stat :label="'Total anwsered Count:'" :value="totalCount" />
+                <Stat :label="'Average Response Time:'" :value="timeRate" />
+            </div>
         </div>
         <PanelButtons :display="'finish'" class="panel" style="height: 20%;" />
     </div>
@@ -65,7 +69,6 @@ export default {
 h2 {
     font-size: 1.7em;
     font-family: 'PixelColeco';
-
 }
 
 h3 {
@@ -73,8 +76,32 @@ h3 {
     box-shadow: 0px 0px 8px #BBC7A4;
 }
 
-.stats-container {
+.content {
     width: 100%;
     height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.stat {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 </style>
