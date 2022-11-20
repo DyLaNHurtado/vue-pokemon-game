@@ -1,5 +1,7 @@
-<template>
-<svg version="1.1" id="Capa_1" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 490.89 490.89" style="enable-background:new 0 0 490.89 490.89;" xml:space="preserve">
 <g id="XMLID_231_">
 	<path id="XMLID_233_" d="M97.38,292.692V181.229c0-24.324,19.792-44.125,44.134-44.125h170.733v19.506
@@ -44,4 +46,3 @@
 <g>
 </g>
 </svg>
-</template>

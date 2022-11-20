@@ -1,22 +1,24 @@
 <template>
 <div v-if="display==='finish'" class="panel-container">
     <HomeButton/>
+    <ReplayButton/>
     <GameModeButton/>
-    <HomeButton/>
 </div>
 <div v-else class="panel-container">
     <HomeButton/>
-    <HomeButton/>
+    <GameModeButton/>
 </div>
 </template>
 <script>
 import GameModeButton from './GameModeButton.vue';
 import HomeButton from './HomeButton.vue';
+import ReplayButton from './ReplayButton.vue';
 export default {
     name:'PanelButtons',
     components:{
     HomeButton,
-    GameModeButton
+    GameModeButton,
+    ReplayButton
 },
     props:{
         display:{
