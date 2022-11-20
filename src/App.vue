@@ -1,10 +1,10 @@
 <template>
-<router-view></router-view>
-<a href="https://github.com/DyLaNHurtado" target="_blank">
-  <footer>
-    <span>Made with 💗 by DyLaNHurtado </span>
-  </footer>
-</a>
+  <router-view></router-view>
+  <a href="https://github.com/DyLaNHurtado" target="_blank">
+    <footer>
+      <span>Made with 💗 by DyLaNHurtado </span>
+    </footer>
+  </a>
 </template>
 
 <script>
@@ -25,13 +25,15 @@ export default {
   height: 100%;
   font-family: 'TimeBurner';
 }
-a{
+
+a {
   text-align: center;
   text-decoration: none;
   font-family: 'TimeBurner';
   color: #2c3e50;
 }
-footer{
+
+footer {
   text-align: center;
   text-decoration: none;
   font-family: 'TimeBurnerBold';
@@ -42,7 +44,8 @@ footer{
   transition: all .5s;
   padding: 2px 0;
 }
-footer:hover{
+
+footer:hover {
   background-color: #2c3e50;
   color: #BBC7A4;
   padding: 10px 0;

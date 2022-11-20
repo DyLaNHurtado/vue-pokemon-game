@@ -1,66 +1,64 @@
 <template>
-<div class="home-container">
-    <div class="title-container">
-        <h2>Pokemon Challenge</h2>
-        <span>Guess the pokemon by name</span>
+    <div class="home-container">
+        <div class="title-container">
+            <h2>Pokemon Challenge</h2>
+            <span>Guess the pokemon by name</span>
+        </div>
+        <div class="image-container">
+            <img src="../assets/home.gif" />
+        </div>
+        <div class="bottom-container">
+            <PlayButton />
+        </div>
     </div>
-    <div class="image-container">
-        <img src="../assets/home.gif" />
-    </div>
-    <div class="bottom-container">
-        <PlayButton/>
-
-    </div>
-</div>
 </template>
-  <script>
+<script>
 import PlayButton from '@/components/PlayButton.vue';
 
-  export default {
-      name: 'HomePage',
+export default {
+    name: 'HomePage',
     components: {
-    PlayButton
-},
-    data(){
-      return{
-        
-      }
+        PlayButton
     },
-  }
-  </script>
+}
+</script>
 <style scoped>
-.home-container{
+.home-container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
 }
-.title-container{
+
+.title-container {
     min-width: 100%;
     background-color: #2C363F;
     padding: 20px 0;
     border-bottom: 8px solid #E75A7C;
 }
 
-h2{
+h2 {
     font-family: 'PixelColeco';
     font-size: 3em;
     margin: 0;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
     color: #E75A7C;
 }
-span{
+
+span {
     font-size: 1.5em;
     color: #BBC7A4;
 }
-.image-container{
+
+.image-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-img{
+
+img {
     height: 400px;
     user-select: none;
     -moz-user-select: none;
@@ -73,7 +71,8 @@ img{
     transition: all .2s;
 
 }
-.bottom-container{
+
+.bottom-container {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,26 +1,26 @@
 <template >
     <div class="pokemon-container">
         <img v-show="!pokemon.id" class="loader" src="../assets/loader.gif">
-        <img  :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon':''" />
+        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon' : ''" />
     </div>
 </template>
 <script>
 export default {
-    name:'PokemonPicture',
-    props:{
-        pokemon:{
-            type: Object ,
-            required:true,
-        },showPokemon:{
-            type:Boolean,
-            required:true,
-            default:false,
+    name: 'PokemonPicture',
+    props: {
+        pokemon: {
+            type: Object,
+            required: true,
+        }, showPokemon: {
+            type: Boolean,
+            required: true,
+            default: false,
         }
-    },computed:{
-        imgSrc(){
-            if(this.pokemon.id){
-             return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemon.id}.png`
-            }else{
+    }, computed: {
+        imgSrc() {
+            if (this.pokemon.id) {
+                return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemon.id}.png`
+            } else {
                 return '';
             }
         }
@@ -29,13 +29,14 @@ export default {
 }
 </script>
 <style scoped>
-.pokemon-container{
+.pokemon-container {
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-img{
+
+img {
     height: 200px;
     user-select: none;
     -moz-user-select: none;
@@ -48,8 +49,8 @@ img{
     transition: all .2s;
 
 }
-    .hidden-pokemon{
-        filter: brightness(0);
-    }
 
+.hidden-pokemon {
+    filter: brightness(0);
+}
 </style>

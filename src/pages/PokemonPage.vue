@@ -1,17 +1,17 @@
 <template>
   <h1 id="wait" v-show="!pokemon.id">Wait please ...</h1>
-<Transition>
-  <div v-show="pokemon.id" class="game-container" >
-    <h1>Who is that pokemon?</h1>
-    <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon"/>
-    <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
-    <Timer :time="11"/>
-    <PanelButtons :display="'game'" class="panel"/>
-    <Transition>
-      <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
-    </Transition>
-  </div>
-</Transition>
+  <Transition>
+    <div v-show="pokemon.id" class="game-container">
+      <h1>Who is that pokemon?</h1>
+      <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon" />
+      <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
+      <Timer :time="11" />
+      <PanelButtons :display="'game'" class="panel" />
+      <Transition>
+        <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
+      </Transition>
+    </div>
+  </Transition>
 </template>
 <script>
 import PokemonOptions from '@/components/PokemonOptions.vue';
@@ -22,7 +22,7 @@ import PanelButtons from '@/components/PanelButtons.vue';
 import Timer from '@/components/Timer.vue';
 import FinishDialog from '@/components/FinishDialog.vue';
 export default {
-    name: 'PokemonPage',
+  name: 'PokemonPage',
   components: {
     PokemonPicture,
     PokemonOptions,
@@ -30,36 +30,36 @@ export default {
     PanelButtons,
     Timer,
     FinishDialog
-},
-  data(){
-    return{
-      pokemonArr:[],
-      pokemon:{},
-      showPokemon:false,
-      correctCount:0,
-      totalCount:0,
-      score:0,
-      timeRate:0,
-      timeRateTimeout:null
+  },
+  data() {
+    return {
+      pokemonArr: [],
+      pokemon: {},
+      showPokemon: false,
+      correctCount: 0,
+      totalCount: 0,
+      score: 0,
+      timeRate: 0,
+      timeRateTimeout: null
     }
   },
-  methods:{
-    async mixPokemonsArr(){
+  methods: {
+    async mixPokemonsArr() {
       this.pokemonArr = await getPokemonOptions(localStorage.getItem('mode'));
-      const rndInt = Math.floor(Math.random()*4);
+      const rndInt = Math.floor(Math.random() * 4);
       this.pokemon = this.pokemonArr[rndInt];
     },
-    checkAnswer(isCorrect){
-      this.showPokemon=true;
-      if(isCorrect){
+    checkAnswer(isCorrect) {
+      this.showPokemon = true;
+      if (isCorrect) {
         this.correctCount += 1;
         this.score += 5;
-      }else{
+      } else {
         this.score -= 3;
       }
-      this.totalCount+=1;
-      setTimeout(()=> this.newGame(),500);
-    },newGame(){
+      this.totalCount += 1;
+      setTimeout(() => this.newGame(), 500);
+    }, newGame() {
       this.pokemonArr = [];
       this.showPokemon = false;
       this.showAnswer = false;
@@ -67,7 +67,7 @@ export default {
       this.mixPokemonsArr();
     }
   },
-  mounted(){
+  mounted() {
     this.mixPokemonsArr();
   }
 }
