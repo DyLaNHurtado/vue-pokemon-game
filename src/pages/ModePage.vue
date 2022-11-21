@@ -92,6 +92,7 @@ h1 {
   .gamemodes-container {
     display: flex;
     flex-direction: column;
+    min-height: 50%;
   }
 }
 </style>
