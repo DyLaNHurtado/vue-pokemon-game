@@ -1,5 +1,5 @@
 <template>
-  <p :class="isLittleTime ? 'little-time' : ''">
+  <p :class="isLittleTime ? 'little-time blink' : ''">
     {{ !isTimeUp ? `${("0" + minutes).slice(-2)}:${("0" + seconds).slice(-2)}` : "Time's Up!" }}
   </p>
 </template>
@@ -9,8 +9,13 @@ export default {
   props: {
     time: {
       type: Number,
-      default: 0
+      required:true
+    },
+    needReset:{
+      type:Boolean,
+      required:true,
     }
+
   },
   data() {
     return {
@@ -23,12 +28,7 @@ export default {
     }
   },
   mounted() {
-    this.total = parseInt(this.time, 10)
-    this.isTimeUp = false;
-    this.isLittleTime = false;
-    this.interval = setInterval(() => {
-      this.tick()
-    }, 1000)
+    this.resetTimer();
   },
   methods: {
     tick() {
@@ -43,6 +43,23 @@ export default {
         this.$emit('timeUp');
       }
       this.total -= 1
+    },resetTimer(){
+      this.minutes="--";
+      this.seconds="--";
+      this.total = parseInt(this.time, 10)
+      this.isTimeUp = false;
+      this.isLittleTime = false;
+      this.interval = setInterval(() => {
+        this.tick()
+      }, 1000)
+  }
+  },
+  watch:{
+    needReset(newValue){
+      if(newValue === true){
+        clearInterval(this.interval);
+        this.resetTimer();
+      }
     }
   }
 }

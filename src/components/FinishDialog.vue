@@ -13,7 +13,7 @@
                 <Stat :label="'Average Response Time:'" :value="timeRate" />
             </div>
         </div>
-        <PanelButtons :display="'finish'" class="panel" style="height: 20%;" />
+        <PanelButtons :display="'finish'" @replayPanel="$emit('replayFinish');" class="panel" style="height: 20%;" />
     </div>
 </template>
 <script>

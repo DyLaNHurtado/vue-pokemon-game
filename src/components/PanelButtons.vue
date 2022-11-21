@@ -1,7 +1,7 @@
 <template>
     <div v-if="display === 'finish'" class="panel-container">
         <HomeButton />
-        <ReplayButton />
+        <ReplayButton @replayButtonClicked="$emit('replayPanel');"/>
         <GameModeButton />
     </div>
     <div v-else class="panel-container">
@@ -25,7 +25,8 @@ export default {
             type: String,
             required: true
         }
-    }
+    },
+    emits:['replayPanel']
 }
 </script>
 <style scoped>

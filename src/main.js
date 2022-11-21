@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './css/styles.css'
+import './css/blink-animation.css'
 
 import HomePage from '@/pages/HomePage'
 import ModePage from '@/pages/ModePage'

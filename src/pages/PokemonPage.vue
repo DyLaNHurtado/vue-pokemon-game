@@ -1,14 +1,15 @@
 <template>
+  <div id="bg-dark" v-show="finishDialog"></div>
   <h1 id="wait" v-show="!pokemon.id">Wait please ...</h1>
   <Transition>
     <div v-show="pokemon.id" class="game-container">
       <h1>Who is that pokemon?</h1>
       <PokemonPicture :pokemon="pokemon" :showPokemon="showPokemon" />
       <PokemonOptions @selection-pokemon="checkAnswer" :pokemonCorrect="pokemon" :pokemons="pokemonArr" />
-      <Timer :time="11" />
+      <Timer :time="time" @timeUp="finishGame" :needReset="needReset"/>
       <PanelButtons :display="'game'" class="panel" />
       <Transition>
-        <FinishDialog :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
+        <FinishDialog v-show="finishDialog" @replayFinish="replayGame" :score="score" :totalCount="totalCount" :correctCount="correctCount" :timeRate="timeRate" />
       </Transition>
     </div>
   </Transition>
@@ -40,7 +41,10 @@ export default {
       totalCount: 0,
       score: 0,
       timeRate: 0,
-      timeRateTimeout: null
+      timeRateTimeout: null,
+      finishDialog: false,
+      time:10,
+      needReset:false,
     }
   },
   methods: {
@@ -65,6 +69,14 @@ export default {
       this.showAnswer = false;
       this.pokemon = {};
       this.mixPokemonsArr();
+    },finishGame(){
+      this.finishDialog = true;
+      this.needReset = false;
+    },replayGame(){
+      this.needReset = true;
+      this.finishDialog = false;
+      this.newGame();
+
     }
   },
   mounted() {
@@ -72,3 +84,15 @@ export default {
   }
 }
 </script>
+<style scoped>
+#bg-dark{
+  background-color: #222222be;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+}
+</style>

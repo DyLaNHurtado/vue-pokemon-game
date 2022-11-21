@@ -1,9 +1,7 @@
 <template>
-    <router-link to="/game">
-        <button>
+        <button @click="$emit('replayButtonClicked');">
             <ReplayIcon class="icon" /><span>Replay</span>
         </button>
-    </router-link>
 </template>
     
 <script>
@@ -14,6 +12,6 @@ export default {
     name: 'GameModeButton',
     components: {
         ReplayIcon
-    }
+    },emits:['replayButtonClicked']
 }
 </script>
