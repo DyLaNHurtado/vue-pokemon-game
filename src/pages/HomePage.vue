@@ -5,7 +5,7 @@
             <span>Guess the pokemon by name</span>
         </div>
         <div class="image-container">
-            <img src="../assets/home.gif" />
+            <img src="../assets/home.gif"  onerror="this.style.display='none'"/>
         </div>
         <div class="bottom-container">
             <PlayButton />

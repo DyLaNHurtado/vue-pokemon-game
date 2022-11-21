@@ -1,7 +1,7 @@
 <template >
     <div class="pokemon-container">
-        <img v-show="!pokemon.id" class="loader" src="../assets/loader.gif">
-        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon' : ''" />
+        <img v-show="!pokemon.id" class="loader" src="../assets/loader.gif" onerror="this.style.display='none'">
+        <img :src="imgSrc" :class="!showPokemon ? 'hidden-pokemon' : ''" onerror="this.style.display='none'"/>
     </div>
 </template>
 <script>

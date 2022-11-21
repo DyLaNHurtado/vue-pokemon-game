@@ -87,4 +87,11 @@ h1 {
   flex-direction: row;
   gap: 1vw;
 }
+
+@media only screen and (max-width: 600px) {
+  .gamemodes-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

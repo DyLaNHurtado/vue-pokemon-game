@@ -2,8 +2,7 @@
     <router-link to="/game">
         <li @click="selectMode">
             <div class="img-container">
-                <img
-                    :src="uri ? uri : 'https://raw.githubusercontent.com/DyLaNHurtado/vue-pokemon-game/master/src/assets/loader.gif'" />
+                <img :src="uri" onerror="this.style.display='none'" />
             </div>
             <div class="option-container">
                 <span id="name">{{ name || 'Loading...' }}</span>
@@ -48,6 +47,7 @@ li {
     display: flex;
     flex-direction: row;
     box-shadow: none;
+    min-height: 100%;
     z-index: 2;
     border: 2px solid #BBC7A4;
     transition: all .3s;
