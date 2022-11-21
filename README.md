@@ -6,7 +6,7 @@ Change my opinion playing this Pokemon Game.
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5d7b3394-d208-4af1-9f96-283c80bfffe7/deploy-status)](https://app.netlify.com/sites/pokemonchallenge/deploys)
 
 
-## 🛠️ Tecnologias usadas 🛠️
+## 🛠️ Used Technologies 🛠️
 
 
 | Name | Use |
@@ -44,5 +44,7 @@ npm run test:unit
 ```
 
 ## 🎨 Color Palette 🎨
+<a href="https://coolors.co/2c363f-e75a7c-f2f5ea-d6dbd2-bbc7a4" target="_blank">
+  <img src="https://raw.githubusercontent.com/DyLaNHurtado/vue-pokemon-game/master/.github/pallete.png" loading="lazy" width="100%"/>
+</a>
 
-https://coolors.co/2c363f-e75a7c-f2f5ea-d6dbd2-bbc7a4
