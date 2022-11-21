@@ -34,7 +34,6 @@ export default {
         }
     }, methods: {
         selectMode() {
-            console.log(this.id);
             localStorage.setItem('mode', this.id);
         }
     }
