@@ -62,8 +62,6 @@ span {
     background-image: url(../assets/home.gif);
 }
 
-
-
 @keyframes imageAnimation {
   0% {
     background-image: url(../assets/home.gif);
@@ -71,12 +69,12 @@ span {
     -moz-animation-timing-function: ease-in;
   }
   50% {
-    background-image: url(../assets/loader.gif);
+    background-image: url(../assets/home1.gif);
     animation-timing-function: ease-in-out;
     -moz-animation-timing-function: ease-in-out;
   }
   100% {
-    background-image: url(../assets/home.gif);
+    background-image: url(../assets/home2.gif);
     animation-timing-function: ease-in-out;
     -moz-animation-timing-function: ease-in-out;
   }
