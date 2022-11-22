@@ -4,9 +4,7 @@
             <h2>Pokemon Challenge</h2>
             <span>Guess the pokemon by name</span>
         </div>
-        <div class="image-container">
-            <img src="../assets/home.gif"  onerror="this.style.display='none'"/>
-        </div>
+        <div class="image-container"></div>
         <div class="bottom-container">
             <PlayButton />
         </div>
@@ -52,24 +50,36 @@ span {
 }
 
 .image-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-width: 100%;
+    min-height: 50%;
+    background-position: center;
+    animation: imageAnimation 30s linear infinite 0s;
+    -moz-animation: imageAnimation 30s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../assets/home.gif);
 }
 
-img {
-    height: 400px;
-    user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-drag: none;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    transition: all .2s;
 
+
+@keyframes imageAnimation {
+  0% {
+    background-image: url(../assets/home.gif);
+    animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+  }
+  50% {
+    background-image: url(../assets/loader.gif);
+    animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  100% {
+    background-image: url(../assets/home.gif);
+    animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+  }
 }
 
 .bottom-container {
