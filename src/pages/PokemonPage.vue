@@ -41,7 +41,7 @@ export default {
       totalCount: 0,
       score: 0,
       timeRate: 0,
-      timeRateTimeout: null,
+      timeRateInterval: null,
       finishDialog: false,
       time:10,
       needReset:false,
@@ -70,17 +70,29 @@ export default {
       this.pokemon = {};
       this.mixPokemonsArr();
     },finishGame(){
-      this.finishDialog = true;
+      clearInterval(this.timeRateInterval);
+      this.totalCount!==0 
+        ? this.timeRate /= this.totalCount 
+        : this.timeRate = this.time;
+        
+      console.log(this.timeRate);
+      setTimeout(()=>this.finishDialog = true, 500);
       this.needReset = false;
     },replayGame(){
       this.needReset = true;
       this.finishDialog = false;
-      this.newGame();
+      this.timeRate = 0;
+      this.score = 0;
+      this.correctCount = 0;
+      this.totalCount = 0;
+      this.timeRateInterval = setInterval(()=> this.timeRate += 1 ,1000);
 
+      this.newGame();
     }
   },
   mounted() {
     this.mixPokemonsArr();
+    this.timeRateInterval = setInterval(()=> this.timeRate += 1 ,1000);
   }
 }
 </script>

@@ -10,7 +10,7 @@
             </div>
             <div class="container-mobile">
                 <Stat :label="'Total anwsered Count:'" :value="totalCount" />
-                <Stat :label="'Average Response Time:'" :value="timeRate" />
+                <Stat :label="'Average Response Time:'" :value="formatAverage(timeRate)" />
             </div>
         </div>
         <PanelButtons :display="'finish'" @replayPanel="$emit('replayFinish');" class="panel" style="height: 20%;" />
@@ -40,7 +40,14 @@ export default {
             required: true,
         }
     },
-    methods: {},
+    methods: {
+        formatAverage(avg){
+            if(avg.toFixed(2).slice(-2)!="00"){
+                return avg.toFixed(2)+'s';
+            }
+            return avg.toFixed(0)+'s';
+        }
+    },
     components: { PanelButtons, Stat }
 }
 </script>
