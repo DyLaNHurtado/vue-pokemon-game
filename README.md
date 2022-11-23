@@ -14,6 +14,8 @@ Change my opinion playing this Pokemon Game.
 | [![Jest](https://img.shields.io/badge/Jest-red?style=for-the-badge&logo=jest)](https://jestjs.io/es-ES/) | Framework to testing | 
 | [![Axios](https://img.shields.io/badge/axios-white.svg?style=for-the-badge&logo=axios&logoColor=blue)](https://axios-http.com/) |  HTTP Requests Library  |
 | [![Standard](https://img.shields.io/badge/Standard.js-white?style=for-the-badge&logo=standardjs&logoColor=yellow)](https://www.netlify.com/) | JavaScript style guide, linter, and formatter |
+| [![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/) | Comming soon...  |
+| [![Capacitor](https://img.shields.io/badge/capacitor-white.svg?style=for-the-badge&logo=capacitor)](https://capacitorjs.com/) | Comming soon...  |
 | [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/) | To Deploy and Continuous Integration |
 | [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) | IDE used to develop |
 
