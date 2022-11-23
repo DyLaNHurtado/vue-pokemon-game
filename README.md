@@ -9,7 +9,7 @@ Change my opinion playing this Pokemon Game.
 ## 🛠️ Used Technologies 🛠️
 
 | Name | Use |
-| :--: | :--: |
+| :--: | :-- |
 | [![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org/) | Framework Front-end JavaScript | 
 | [![Jest](https://img.shields.io/badge/Jest-red?style=for-the-badge&logo=jest)](https://jestjs.io/es-ES/) | Framework to testing | 
 | [![Axios](https://img.shields.io/badge/axios-white.svg?style=for-the-badge&logo=axios&logoColor=blue)](https://axios-http.com/) |  HTTP Requests Library  |
