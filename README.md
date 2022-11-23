@@ -19,6 +19,17 @@ Change my opinion playing this Pokemon Game.
 | [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) | IDE used to develop |
 
 
+## 🔥 Features 🔥
+
+* - [x] Responsive Design.
+* - [x] Deploy web.
+* - [x] Differents gamemodes to select.
+* - [x] Get Pokemons consuming <a href="https://pokeapi.co" target="_blank">PokeApi</a> with Axios
+* - [x] Added stats at the end of game.
+* - [ ] Tests with Jest
+* - [ ] Turn into mobile app
+
+Any other idea or solution ? 🤔 Tell me <a href="https://github.com/DyLaNHurtado/vue-pokemon-game/issues/new/choose" target="_blank">here</a>.
 
 
 
@@ -47,4 +58,3 @@ npm run test:unit
 <a href="https://coolors.co/2c363f-e75a7c-f2f5ea-d6dbd2-bbc7a4" target="_blank">
   <img src="https://raw.githubusercontent.com/DyLaNHurtado/vue-pokemon-game/master/.github/pallete.png" loading="lazy" width="100%"/>
 </a>
-
