@@ -8,9 +8,8 @@ Change my opinion playing this Pokemon Game.
 
 ## 🛠️ Used Technologies 🛠️
 
-
 | Name | Use |
-| -- | -- |
+| :--: | :--: |
 | [![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org/) | Framework Front-end JavaScript | 
 | [![Jest](https://img.shields.io/badge/Jest-red?style=for-the-badge&logo=jest)](https://jestjs.io/es-ES/) | Framework to testing | 
 | [![Axios](https://img.shields.io/badge/axios-white.svg?style=for-the-badge&logo=axios&logoColor=blue)](https://axios-http.com/) |  HTTP Requests Library  |
@@ -19,15 +18,24 @@ Change my opinion playing this Pokemon Game.
 | [![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) | IDE used to develop |
 
 
-## 🔥 Features 🔥
+## 👀 Features 👀
 
-* - [x] Responsive Design.
-* - [x] Deploy web.
-* - [x] Differents gamemodes to select.
-* - [x] Get Pokemons consuming <a href="https://pokeapi.co" target="_blank">PokeApi</a> with Axios
-* - [x] Added stats at the end of game.
-* - [ ] Tests with Jest
-* - [ ] Turn into mobile app
+#### 🔥 COMPLETED 🔥 
+  * - [x] Responsive Design.
+  * - [x] Deploy web.
+  * - [x] Differents gamemodes to select.
+  * - [x] Get Pokemons consuming <a href="https://pokeapi.co" target="_blank">PokeApi</a> with Axios.
+  * - [x] Added stats at the end of game.
+#### 🔮 FUTURE IMPLEMENTATIONS 🔮
+  * - [ ] Tests with Jest.
+  * - [ ] Add Firebase as back-end.
+  * - [ ] Login and register with and without Google/Facebook/etc.
+  * - [ ] Add online scoreboard to see all stats users.
+  * - [ ] Duel multiplayer with friends.
+  * - [ ] Turn into mobile app.
+
+
+
 
 Any other idea or solution ? 🤔 Tell me <a href="https://github.com/DyLaNHurtado/vue-pokemon-game/issues/new/choose" target="_blank">here</a>.
 
