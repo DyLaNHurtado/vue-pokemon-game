@@ -54,9 +54,7 @@ span {
     min-height: 50%;
     background-position: center;
     animation: imageAnimation 30s linear infinite 0s;
-    -moz-animation: imageAnimation 30s linear infinite 0s;
     animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../assets/home.gif);
@@ -66,22 +64,18 @@ span {
   25% {
     background-image: url(../assets/home.gif);
     animation-timing-function: ease-in;
-    -moz-animation-timing-function: ease-in;
   }
   50% {
     background-image: url(../assets/home3.gif);
     animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
   }
   75% {
     background-image: url(../assets/home4.gif);
     animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
   }
   100% {
     background-image: url(../assets/home2.gif);
     animation-timing-function: ease-in-out;
-    -moz-animation-timing-function: ease-in-out;
   }
 }
 
