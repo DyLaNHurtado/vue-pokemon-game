@@ -10,7 +10,8 @@ Change my opinion playing this Pokemon Game.
 
 | Name | Use |
 | :--: | :-- |
-| [![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org/) | Framework Front-end JavaScript | 
+| [![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org/) | Framework Front-end JavaScript |
+| [![daisyUI](https://img.shields.io/badge/daisyUI-23282e.svg?style=for-the-badge&logo=daisyui&logoColor=%234FC08D)](https://daisyui.com/) | Framework CSS for styles and web components | 
 | [![Jest](https://img.shields.io/badge/Jest-red?style=for-the-badge&logo=jest)](https://jestjs.io/es-ES/) | Framework to testing | 
 | [![Axios](https://img.shields.io/badge/axios-white.svg?style=for-the-badge&logo=axios&logoColor=blue)](https://axios-http.com/) |  HTTP Requests Library  |
 | [![Standard](https://img.shields.io/badge/Standard.js-white?style=for-the-badge&logo=standardjs&logoColor=yellow)](https://www.netlify.com/) | JavaScript style guide, linter, and formatter |
