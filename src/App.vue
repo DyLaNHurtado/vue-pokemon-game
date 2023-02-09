@@ -1,5 +1,6 @@
-<template>
+<template data-theme="custom_theme">
   <router-view></router-view>
+  <button class="btn btn-primary">Button</button>
   <a href="https://github.com/DyLaNHurtado" target="_blank">
     <footer>
       <span>Made with 💗 by DyLaNHurtado </span>
