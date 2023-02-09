@@ -22,6 +22,7 @@ export default {
 button {
     text-align: center;
     width: 80vw;
+    height: 10vh;
     border: 6px solid #BBC7A4;
     padding: 20px;
     display: flex;

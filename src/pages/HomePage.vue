@@ -2,13 +2,18 @@
     <div class="home-container">
         <div class="title-container">
             <h2>Pokemon Challenge</h2>
-            <span>Guess the pokemon by name</span>
+            <h3>Guess the pokemon by name</h3>
         </div>
         <div class="image-container"></div>
         <div class="bottom-container">
             <PlayButton />
         </div>
     </div>
+    <a href="https://github.com/DyLaNHurtado" target="_blank">
+    <footer>
+      <span>Made with 💗 by DyLaNHurtado </span>
+    </footer>
+  </a>
 </template>
 <script>
 import PlayButton from '@/components/PlayButton.vue';
@@ -44,7 +49,7 @@ h2 {
     color: #E75A7C;
 }
 
-span {
+h3 {
     font-size: 1.5em;
     color: #BBC7A4;
 }
@@ -84,7 +89,7 @@ span {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 30%;
+    height: 25vh;
     background-color: #D6DBD2;
     border-top: 8px solid #BBC7A4;
 }

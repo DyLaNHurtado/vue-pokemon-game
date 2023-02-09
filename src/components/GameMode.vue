@@ -48,16 +48,12 @@ li {
     box-shadow: none;
     min-height: 100%;
     z-index: 2;
-    border: 2px solid #BBC7A4;
+    border: 0.5px solid #BBC7A4;
     transition: all .3s;
 }
 
 li:hover {
-    background-color: #2C363F;
-    z-index: 3;
-    box-shadow: 0px 0px 5px #BBC7A4;
-    border: 2px solid #E75A7C;
-    box-shadow: 0px 0px 8px #E75A7C;
+    background-color: #BBC7A4;
 }
 
 img {
@@ -92,11 +88,9 @@ img {
     font-family: 'PixelColeco';
 }
 
-li:hover .option-container #name {
-    color: #E75A7C
+li:active{
+    transition: all 0.1s;
+    scale: 0.9;
 }
 
-li:hover .option-container #description {
-    color: #BBC7A4
-}
 </style>
